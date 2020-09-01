@@ -488,6 +488,10 @@ module Middleware = {
       "limit": ByteLimit.toBytes(limit),
       "inflate": inflate,
     });
+  [@bs.module "cookie-parser"] [@bs.val]
+  external cookie_: (option(string), cookieOptions) => t = "raw";
+  let cookie = (~secret=?, ~decode=?, ()) =>
+    cookie_(secret, {"decode": decode});
   module type S = {
     type f;
     type errorF;
