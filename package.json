@@ -1,6 +1,6 @@
 {
-  "name": "bs-express",
-  "version": "1.0.2",
+  "name": "@qwick/bs-express",
+  "version": "1.0.3",
   "description": "Express bindings in Reason",
   "main": "index.js",
   "dependencies": {
