@@ -442,6 +442,7 @@ module Middleware = {
     "type": string,
     "limit": Js.Nullable.t(int),
   };
+  type cookieOptions = {. "decode": option(string => Js.Json.t)};
   [@bs.module "express"] [@bs.val] external json_ : jsonOptions => t = "json";
   [@bs.module "express"] [@bs.val]
   external urlencoded_ : urlEncodedOptions => t = "urlencoded";
